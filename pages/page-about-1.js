@@ -4,16 +4,9 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useState } from "react";
 import "react-modal-video/css/modal-video.css";
-import CounterUp from "../components/elements/CounterUp";
 import Layout from "../components/layout/Layout";
-import TeamSlider from "../components/slider/Team";
-import TestimonialSlider from "../components/slider/Testimonial";
-const ModalVideo = dynamic(import("react-modal-video"), {
-  ssr: false,
-});
 
 function About1() {
-  const [isOpen, setOpen] = useState(false);
   return (
     <>
       <Layout>
@@ -23,41 +16,42 @@ function About1() {
               <div className="row">
                 <div className="col-lg-7">
                   <span className="tag-1 color-orange-900">
-                    What We Do, What You Get
+                    Kontaktieren Sie uns gerne!
                   </span>
                   <h1 className="text-display-3 mt-30">
-                    A small creative team excited to create beautiful things!
+                    Evgenia Aul – <br className="d-lg-block d-none" /> Ihr
+                    Gardinenservice
                   </h1>
                   <p className="text-body-lead-large color-gray-500 mt-40 pr-40">
-                    Integrated workflow designed for product teams. We create
-                    world-class development and branding
+                    Wir bieten Gardinenwaschservice, innenligenden Sicht- und
+                    Sonnenschutz sowie Näharbeiten
                   </p>
                   <div className="mt-40">
                     <Link href="/page-service-1">
                       <a className="btn btn-black shape-square icon-arrow-right-white">
-                        Join Our Team
+                        Beratung direkt vor Ort
                       </a>
                     </Link>
 
-                    <Link href="/page-contact">
+                    {/* <Link href="/page-contact">
                       <a className="btn btn-link color-gray-900 icon-arrow-right text-heading-6">
                         Contact Us
                       </a>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 <div className="col-lg-5 d-none d-lg-block">
                   <div className="banner-imgs">
                     <div className="block-1 shape-1">
                       <img
-                        src="/assets/imgs/page/about/1/banner2.png"
+                        src="/assets/imgs/plissee/plissee_hoch_1.jpg"
                         alt="Agon"
                       />
                     </div>
                     <img
-                      className="img-responsive shape-2"
+                      className="img-responsive shape-2 rounded-full"
                       alt="Agon"
-                      src="assets/imgs/page/about/1/banner1.png"
+                      src="assets/imgs/gardinen/gardine1.jpg"
                     />
                   </div>
                 </div>
@@ -65,183 +59,82 @@ function About1() {
             </div>
           </div>
         </section>
-        <div className="section-box mt-100">
+        <section className="section-box overflow-visible mt-200 pt-100">
           <div className="container">
-            <div className="row">
-              <div className="col-lg-1" />
-              <div className="col-lg-10">
-                <div className="bd-bottom pb-20 mb-40 text-mb-center">
-                  <div className="row">
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={6} time={3} />
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40t">
-                        Years in Business
-                      </p>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={14} time={3} />k
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40">
-                        Projects Done
-                      </p>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={26} time={3} />
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40">
-                        Countries / Offices
-                      </p>
-                    </div>
-                    <div className="col-lg-3 col-md-3 col-sm-6 col-6 mb-30">
-                      <span className="text-display-3 color-green-900">
-                        +<CounterUp count={24} time={3} />k
-                      </span>
-                      <p className="text-body-text color-gray-500 pl-40">
-                        Constant Clients
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            <div className="row justify-content-md-center">
+              <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+                <Link href="/#">
+                  <a className="item-logo box-hover-shadow hover-up">
+                    <img
+                      alt="Agon"
+                      src="assets/imgs/slider/logo/sample-logo-1.svg"
+                    />
+                  </a>
+                </Link>
               </div>
-              <div className="col-lg-1" />
-            </div>
-          </div>
-        </div>
-        <section className="section-box mt-70">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-1 col-sm-1 col-12" />
-              <div className="col-lg-10 col-sm-10 col-12 text-center">
-                <div className="text-center mb-20">
-                  <span className="tag-1">What We Do, What You Get</span>
-                </div>
-                <h2 className="text-display-3 color-gray-900 mb-60">
-                  We believe in the power
-                  <br className="d-lg-block d-none" />
-                  of creative ideas
-                </h2>
+              <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+                <Link href="/#">
+                  <a className="item-logo box-hover-shadow hover-up">
+                    <img
+                      alt="Agon"
+                      src="assets/imgs/slider/logo/sample-logo-2.svg"
+                    />
+                  </a>
+                </Link>
               </div>
-              <div className="col-lg-1 col-sm-1 col-12" />
-            </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-1" />
-              <div className="col-lg-10">
-                <div className="box-image">
-                  <a
-                    className="popup-youtube btn-play-video btn-play-middle"
-                    onClick={() => setOpen(true)}
-                  ></a>
-                  <img
-                    className="img-responsive bdrd-16"
-                    src="assets/imgs/page/about/1/img-1.png"
-                    alt="Agon"
-                  />
-                </div>
+              <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+                <Link href="/#">
+                  <a className="item-logo box-hover-shadow hover-up">
+                    <img
+                      alt="Agon"
+                      src="assets/imgs/slider/logo/sample-logo-3.svg"
+                    />
+                  </a>
+                </Link>
               </div>
-              <div className="col-lg-1" />
-            </div>
-          </div>
-        </section>
-        <section className="section-box mt-100">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-1 col-sm-1 col-12" />
-              <div className="col-lg-10 col-sm-10 col-12 text-center">
-                <h2 className="text-heading-1 color-gray-900 mb-10">
-                  Providing solutions of every kind
-                </h2>
-                <p className="text-body-lead-large color-gray-600 mt-20">
-                  In a professional context it often happens that private or
-                  <br className="d-lg-block d-none" />
-                  corporate clients order a publication to publish news.
-                </p>
+              <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+                <Link href="/#">
+                  <a className="item-logo box-hover-shadow hover-up">
+                    <img
+                      alt="Agon"
+                      src="assets/imgs/slider/logo/sample-logo-4.svg"
+                    />
+                  </a>
+                </Link>
               </div>
-              <div className="col-lg-1 col-sm-1 col-12" />
-            </div>
-          </div>
-          <div className="container mt-40">
-            <div className="row">
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <div className="list-icons mt-50">
-                  <div className="item-icon">
-                    <span className="icon-left">
-                      <img
-                        src="/assets/imgs/page/homepage2/icon-acquis.svg"
-                        alt="Agon"
-                      />
-                    </span>
-                    <h4 className="text-heading-4">1. Acquisition</h4>
-                    <p className="text-body-text color-gray-600 mt-15">
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit laborum — semper quis
-                      lectus nulla.
-                    </p>
-                  </div>
-                </div>
+              <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+                <Link href="/#">
+                  <a className="item-logo box-hover-shadow hover-up">
+                    <img
+                      alt="Agon"
+                      src="assets/imgs/slider/logo/sample-logo-5.svg"
+                    />
+                  </a>
+                </Link>
               </div>
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <div className="list-icons mt-50">
-                  <div className="item-icon">
-                    <span className="icon-left">
-                      <img
-                        src="/assets/imgs/page/homepage2/icon-active.svg"
-                        alt="Agon"
-                      />
-                    </span>
-                    <h4 className="text-heading-4">2. Activation</h4>
-                    <p className="text-body-text color-gray-600 mt-15">
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit laborum — semper quis
-                      lectus nulla.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <div className="list-icons mt-50">
-                  <div className="item-icon">
-                    <span className="icon-left">
-                      <img
-                        src="/assets/imgs/page/homepage2/icon-retent.svg"
-                        alt="Agon"
-                      />
-                    </span>
-                    <h4 className="text-heading-4">3. Retention</h4>
-                    <p className="text-body-text color-gray-600 mt-15">
-                      Excepteur sint occaecat cupidatat non proident, sunt in
-                      culpa qui officia deserunt mollit laborum — semper quis
-                      lectus nulla.
-                    </p>
-                  </div>
-                </div>
+              <div className="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+                <Link href="/#">
+                  <a className="item-logo box-hover-shadow hover-up">
+                    <img
+                      alt="Agon"
+                      src="assets/imgs/slider/logo/sample-logo-6.svg"
+                    />
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
         </section>
-        <section className="section-box mt-100">
+        <section className="section-box">
           <div className="container">
-            <div className="text-center mb-20">
-              <span className="tag-1 bg-6 color-green-900">
-                What We Do, What You Get
-              </span>
-            </div>
             <div className="row">
               <div className="col-lg-2 col-sm-1 col-12" />
-              <div className="col-lg-8 col-sm-10 col-12 text-center">
+              <div className="col-lg-8 col-sm-10 col-12 text-center mt-100">
                 <h2 className="text-heading-1 color-gray-900">
-                  Bringing the world's
-                  <br className="d-lg-block d-none" />
-                  ideas to life
+                  Unsere Leistungen
                 </h2>
                 <p className="text-body-lead-large color-gray-600 mt-20">
-                  Developers are trusted to create an engaging experience for
-                  their companies, so we build tools to help them.
+                  Wir bieten kostenlose Beratung – Direkt vor Ort.
                 </p>
               </div>
               <div className="col-lg-2 col-sm-1 col-12" />
@@ -250,69 +143,68 @@ function About1() {
           <div className="container mt-70">
             <div className="row">
               <div className="col-lg-4 col-sm-12">
-                <div className="card-grid-style-3 pb-40 bg-5 mb-30">
+                <div className="card-grid-1 bg-5 bg-business hover-up">
                   <div className="grid-1-img">
                     <img
                       src="/assets/imgs/page/homepage1/business-strategy.svg"
                       alt="Agon"
                     />
                   </div>
-                  <h3 className="text-heading-3 mt-20">Business Strategy</h3>
+                  <h3 className="text-heading-3 mt-20">Gardinenservice</h3>
                   <p className="text-body-excerpt mt-20">
-                    You are always welcome to visit our little den. Professional
-                    in teir craft! All products were super amazing with strong
-                    attension to details, comps and overall vibe.
+                    Wir hängen Ihre Gardinen ab, waschen oder reinigen sie und
+                    hängen sie wieder auf.
                   </p>
                   <div className="mt-30">
-                    <Link href="/page-service-1">
-                      <a className="btn btn-default icon-arrow-right">
-                        Learn more
+                    <Link href="/page-about-1">
+                      <a className="btn btn-default btn-white icon-arrow-right">
+                        weitere Info
                       </a>
                     </Link>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 col-sm-12">
-                <div className="card-grid-style-3 bd-bg-6 pb-40 mb-30">
+                <div className="card-grid-1 bg-9 bg-local hover-up">
                   <div className="grid-1-img">
                     <img
                       src="/assets/imgs/page/homepage1/local.svg"
                       alt="Agon"
                     />
                   </div>
-                  <h3 className="text-heading-3 mt-20">Local Marketing</h3>
+                  <h3 className="text-heading-3 mt-20">
+                    Sicht- und Sonnenschutz
+                  </h3>
                   <p className="text-body-excerpt mt-20">
-                    You are always welcome to visit our little den. Professional
-                    in teir craft! All products were super amazing with strong
-                    attension to details, comps and overall vibe.
+                    Verkauf, Montage und Reparatur von innenliegenden Sicht- und
+                    Sonnenschutz
                   </p>
                   <div className="mt-30">
-                    <Link href="/page-service-1">
-                      <a className="btn btn-default icon-arrow-right">
-                        Learn more
+                    <Link href="/page-about-2">
+                      <a className="btn btn-default btn-white icon-arrow-right">
+                        weitere Info
                       </a>
                     </Link>
                   </div>
                 </div>
               </div>
               <div className="col-lg-4 col-sm-12">
-                <div className="card-grid-style-3 bg-2 pb-40 mb-30">
+                <div className="card-grid-1 bg-5 bg-social hover-up">
                   <div className="grid-1-img">
                     <img
                       src="/assets/imgs/page/homepage1/social.svg"
                       alt="Agon"
                     />
                   </div>
-                  <h3 className="text-heading-3 mt-20">Social media</h3>
+                  <h3 className="text-heading-3 mt-20">Näharbeiten</h3>
                   <p className="text-body-excerpt mt-20">
-                    You are always welcome to visit our little den. Professional
-                    in teir craft! All products were super amazing with strong
-                    attension to details, comps and overall vibe.
+                    Näharbeiten inklusive fachgerechter Montage – auch für
+                    Kissen und Tischdecken.
                   </p>
                   <div className="mt-30">
-                    <Link href="/page-service-1">
-                      <a className="btn btn-default icon-arrow-right">
-                        Learn more
+                    <Link href="/page-about-3">
+                      <a className="btn btn-default btn-white icon-arrow-right">
+                        weitere Info
                       </a>
                     </Link>
                   </div>
@@ -321,129 +213,258 @@ function About1() {
             </div>
           </div>
         </section>
-        <section className="section-box">
-          <div className="container mt-110">
+        <section className="section-box mt-150">
+          <div className="container mt-100">
             <div className="row">
-              <div className="col-lg-9 col-sm-8">
-                <h3 className="text-heading-1 mb-10">Our Team</h3>
-                <p className="text-body-lead-large color-gray-600">
-                  Decades of experience in design and development
+              <div className="col-lg-6 col-sm-12 block-img-we-do">
+                <img
+                  className="bdrd-16 img-responsive"
+                  src="assets/imgs/gardinen/gardine2.jpg"
+                  alt="Gardinen"
+                />
+              </div>
+              <div className="col-lg-6 col-sm-12 block-we-do">
+                <span className="tag-1">kostenlose Beratung vor Ort</span>
+                <h3 className="text-heading-1 mt-30">Gardinenservice</h3>
+                <p className="text-body-lead-large color-gray-600 mt-30">
+                  Necessary to deliver white glove, fully managed campaigns that
+                  surpass industry benchmarks.Take your career to next level.
                 </p>
+                <div className="line-bd-green mt-50" />
+                <div className="row">
+                  <div className="col-lg-8 col-sm-6 col-12 mt-50">
+                    <h4 className="text-heading-6 icon-leaf">
+                      Gardinen Anfertigung nach Ihrem Wunsch und Maß
+                    </h4>
+                    {/* <p className="text-body-excerpt color-gray-600 mt-15">
+                                    The latest design trends meet
+                                    hand-crafted templates.
+                                </p> */}
+                  </div>
+                  <div className="col-lg-8 col-sm-6 col-12 mt-50">
+                    <h4 className="text-heading-6 icon-leaf">
+                      Ausgefallene Designer Stoffe und Gardinenstangen
+                    </h4>
+                    {/* <p className="text-body-excerpt color-gray-600 mt-15">
+                                    The latest design trends meet
+                                    hand-crafted templates.
+                                </p> */}
+                  </div>
+                  <div className="col-lg-8 col-sm-6 col-12 mt-50">
+                    <h4 className="text-heading-6 icon-leaf">
+                      Klassische und Moderne Vorhänge
+                    </h4>
+                    {/* <p className="text-body-excerpt color-gray-600 mt-15">
+                                    The latest design trends meet
+                                    hand-crafted templates.
+                                </p> */}
+                  </div>
+                  <div className="col-lg-8 col-sm-6 col-12 mt-50">
+                    <h4 className="text-heading-6 icon-leaf">
+                      Montage und Dekoration
+                    </h4>
+                    {/* <p className="text-body-excerpt color-gray-600 mt-15">
+                                    The latest design trends meet
+                                    hand-crafted templates.
+                                </p> */}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="container mt-80">
-            <TeamSlider />
           </div>
         </section>
-        <section className="section-box">
-          <div className="container mt-10">
+        <section className="section-box mt-200 bg-green-900 pt-90 pb-90">
+          <div className="container">
             <div className="row">
-              <div className="col-lg-9 col-sm-8">
-                <h3 className="text-heading-1 mb-10">Our Happy Customers</h3>
-                <p className="text-body-lead-large color-gray-600">
-                  Know about our clients, we are a woldwide corporate brand
-                </p>
+              <div className="col-lg-6 col-sm-12 col-12 block-gallery-1">
+                <div className="row">
+                  <div className="col-lg-6">
+                    <img
+                      className="img-responsive mb-10"
+                      src="assets/imgs/plissee/plissee2.jpg"
+                      alt="Plissees"
+                    />
+                    <img
+                      className="img-responsive"
+                      src="assets/imgs/plissee/plissee5.jpg"
+                      alt="Plissees"
+                    />
+                  </div>
+                  <div className="col-lg-6">
+                    <img
+                      className="img-responsive"
+                      src="assets/imgs/plissee/plissee3.jpg"
+                      alt="Plissees"
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="container mt-80">
-            <TestimonialSlider />
-          </div>
-        </section>
-        <section className="section-box">
-          <div className="container mt-30">
-            <div className="row">
-              <div className="col-lg-8">
-                <h3 className="text-heading-1 mb-10">Latest News</h3>
-                <p className="text-body-lead-large color-gray-600">
-                  From Our blog and Event fanpage
-                </p>
-              </div>
-              <div className="col-lg-4 text-lg-end text-start pt-30">
-                <Link href="/blog-1">
-                  <a className="btn btn-black icon-arrow-right-white">
-                    View More
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="container mt-90">
-            <div className="row">
-              <div className="col-lg-4 col-sm-12 pr-30">
-                <div className="card-grid-style-4">
-                  <span className="tag-dot">Company</span>
-                  <Link href="/blog-single">
-                    <a className="text-heading-4">
-                      We can blend colors multiple ways, the most common
+              <div className="col-lg-6 col-sm-12 col-12 block-pl">
+                <h3 className="text-heading-2 color-white mb-30 mt-20">
+                  Innenliegender Sonnenschutz nach Maß inkl. fachgerechter
+                  Montage
+                </h3>
+                <p className="text-inter-lg">· Plissees (Verkauf/Reparatur)</p>
+                <p className="text-inter-lg">· Rollos</p>
+                <p className="text-inter-lg">· Insektenschutz</p>
+                <p className="text-inter-lg">· Wabenplissees</p>
+                <p className="text-inter-lg">· Jalousie (Holz, Metall)</p>
+                <p className="text-inter-lg">· Lamellen</p>
+                <div className="mt-30">
+                  <Link href="/page-service-2">
+                    <a className="btn btn-black text-body-text">
+                      jetzt Termin vereinbaren
                     </a>
                   </Link>
-
-                  <div className="grid-4-img">
-                    <Link href="/blog-single">
-                      <a>
-                        <img
-                          src="/assets/imgs/page/homepage1/img-news-1.png"
-                          alt="Agon"
-                        />
-                      </a>
-                    </Link>
-                  </div>
                 </div>
               </div>
-              <div className="col-lg-4 col-sm-12 pr-30">
-                <div className="card-grid-style-4">
-                  <span className="tag-dot">Marketing Event</span>
-                  <Link href="/blog-single">
-                    <a className="text-heading-4">
-                      How To Blow Through Capital At An Incredible Rate
-                    </a>
-                  </Link>
-
-                  <div className="grid-4-img">
-                    <Link href="/blog-single">
-                      <a>
-                        <img
-                          src="/assets/imgs/page/homepage1/img-news-2.png"
-                          alt="Agon"
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                </div>
+            </div>
+          </div>
+        </section>
+        <section className="section-box mt-200">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-1 col-sm-1 col-12" />
+              <div className="col-lg-10 col-sm-10 col-12 text-center">
+                <h2 className="text-heading-1 color-gray-900 mb-10">
+                  Näharbeiten
+                </h2>
+                <p className="text-body-lead-large color-gray-600 mt-20">
+                  Näharbeiten inklusive fachgerechter Montage –{" "}
+                  <br className="d-lg-block d-none" />
+                  auch für Kissen und Tischdecken.
+                </p>
+                <p className="text-body-excerpt color-gray-600 mt-20">
+                  Viele Stoffe zum Verkauf von bekannten Lieferanten wie Aolo,
+                  Fuggerk etc.
+                </p>
               </div>
-              <div className="col-lg-4 col-sm-12 pr-30">
-                <div className="card-grid-style-4">
-                  <span className="tag-dot">Customer Services</span>
-                  <Link href="/blog-single">
-                    <a className="text-heading-4">
-                      Design Studios That Everyone Should Know About?
-                    </a>
-                  </Link>
-
-                  <div className="grid-4-img color-bg-4">
-                    <Link href="/blog-single">
-                      <a>
-                        <img
-                          src="/assets/imgs/page/homepage1/img-news-3.png"
-                          alt="Agon"
+              <div className="col-lg-1 col-sm-1 col-12" />
+            </div>
+          </div>
+          <div className="container mt-40">
+            <div className="row">
+              <div className="col-lg-4 col-md-12 col-sm-12">
+                <img
+                  className="img-responsive rounded-full"
+                  src="assets/imgs/gardinen/gardine6.jpg"
+                  alt="Plissees"
+                />
+              </div>
+              <div className="col-lg-4 col-md-12 col-sm-12">
+                <img
+                  className="img-responsive rounded-full"
+                  src="assets/imgs/gardinen/gardine4.jpg"
+                  alt="Plissees"
+                />
+              </div>
+              <div className="col-lg-4 col-md-12 col-sm-12">
+                <img
+                  className="img-responsive rounded-full"
+                  src="assets/imgs/gardinen/gardine5.jpg"
+                  alt="Plissees"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section-box box-gray-100 mt-120 mb-20">
+          <div className="container">
+            <div className="icon-wave">
+              <div className="row">
+                <div className="col-lg-12 mb-60">
+                  <span className="text-body-capitalized text-uppercase">
+                    Kostenlose Beratung – direkt vor Ort
+                  </span>
+                  <h2 className="text-heading-3 color-gray-900 mt-10">
+                    Kontaktieren Sie uns!
+                  </h2>
+                  <p className="text-body-text color-gray-600 mt-20">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    <br className="d-lg-block d-none" />
+                    diam nonumy eirmod
+                  </p>
+                </div>
+                <div className="col-lg-4 mb-40">
+                  <h4 className="text-heading-6 color-gray-900 icon-home mb-10 mt-10">
+                    Evgenia Aul
+                  </h4>
+                  <p className="text-body-text color-gray-600">
+                    Musterstraße 123
+                    <br />
+                    37603 Holzminden
+                  </p>
+                  <p className="text-body-text color-gray-600">
+                    05531/123 45 67
+                  </p>
+                  <p className="text-body-text color-gray-600">
+                    info@evgenia-aul.de
+                  </p>
+                </div>
+                <div className="col-lg-8">
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="form-group">
+                        <input
+                          className="form-control"
+                          value=""
+                          placeholder="Name"
                         />
-                      </a>
-                    </Link>
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="form-group">
+                        <input
+                          className="form-control"
+                          value=""
+                          placeholder="Firma"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="form-group">
+                        <input
+                          className="form-control"
+                          value=""
+                          placeholder="Email"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="form-group">
+                        <input
+                          className="form-control"
+                          value=""
+                          placeholder="Telefon"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-lg-12">
+                      <div className="form-group">
+                        <textarea
+                          className="form-control"
+                          placeholder="Nachricht"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div className="col-lg-12 mt-15">
+                      <button
+                        className="btn btn-black icon-arrow-right-white mr-40 mb-20"
+                        type="submit"
+                      >
+                        Nachricht senden
+                      </button>
+                      <br className="d-lg-none d-block" />
+                      <span className="text-body-text-md color-gray-500 mb-20">
+                        Datenschutz akzeptiert
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <ModalVideo
-          channel="youtube"
-          autoplay
-          isOpen={isOpen}
-          videoId="7e90gBu4pas"
-          onClose={() => setOpen(false)}
-        />
       </Layout>
     </>
   );

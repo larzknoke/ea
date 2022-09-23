@@ -7,10 +7,22 @@ body {
 }
 
 a {
-  color: red;
+  color: inherit;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.header .main-header .header-left .header-logo {
+  max-width: 150px;
+}
+
+.rounded-full {
+  border-radius: 16px;
+}
+
+.banner-hero.banner-2 .banner-imgs .block-1 {
+  width: 280px;
 }

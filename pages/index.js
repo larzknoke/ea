@@ -513,7 +513,10 @@ function Home() {
                             value=""
                             id="datenschutz"
                           />
-                          <label className="form-check-label" for="datenschutz">
+                          <label
+                            className="form-check-label"
+                            htmlFor="datenschutz"
+                          >
                             Ja, ich habe die Datenschutzerklärungzur Kenntnis
                             genommen und bin damit einverstanden, dass die von
                             mir angegebenen Daten elektronisch erhoben und

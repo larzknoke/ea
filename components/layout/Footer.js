@@ -3,11 +3,11 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="footer mt-50">
+      <footer className="footer mt-50 mb-50">
         <div className="container">
           <div className="row">
             <div className="col-lg-3 width-20 mb-30">
-              <div className="col-md-4 col-sm-6 text-center text-md-start">
+              <div className="col-md-4 col-sm-12 text-center text-md-start">
                 <Link href="/">
                   <a>
                     <img
@@ -19,8 +19,10 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="col-lg-3 width-20 mb-30">
-              <h4 className="text-heading-5">Kontakt</h4>
+            <div className="col-lg-3 width-20 mb-30 text-center text-md-start">
+              <h4 className="text-heading-5 text-center text-md-start">
+                Kontakt
+              </h4>
               <div className="mt-20 text-body-text color-gray-600 mb-20">
                 Musterstraße 12 <br />
                 37603 Holzminden
@@ -36,7 +38,7 @@ const Footer = () => {
           <div className="footer-bottom mt-20">
             <div className="row">
               <div className="col-md-6">
-                <span className="color-gray-400 text-body-lead">
+                <span className="color-gray-400 text-body-lead d-none d-md-inline-block">
                   © Evgenia Aul 2022
                 </span>
                 <Link href="/page-terms">

@@ -26,3 +26,38 @@ a {
 .banner-hero.banner-2 .banner-imgs .block-1 {
   width: 280px;
 }
+
+.grecaptcha-badge {
+  display: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .burger-icon,
+  .sticky-bar.stick .burger-icon {
+    top: 35px;
+  }
+}
+
+.mobile-header-wrapper-style {
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-top {
+    padding: 33px 30px 20px 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mt-100,
+  .mt-150,
+  .mt-200 {
+    margin-top: 50px !important;
+  }
+  .block-pl {
+    padding-left: 30px;
+  }
+  .box-gray-100 {
+    padding: 40px 20px;
+  }
+}
